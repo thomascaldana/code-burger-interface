@@ -12,17 +12,22 @@ export const Container = styled.div`
 
 `
 export const LoginImage = styled.img`
-  height: 70%;
+  height: 85%; // i changed from 70 to 85
 `
 
 export const ContainerItens = styled.div`
 background: #373737;
 border-radius: 0 10px 10px 0;
-height: 70%;
+height: 85%; // i changed from 70 to 85
 padding: 25px 75px;
 display: flex;
 flex-flow: column nowrap;
 justify-content: center;
+
+form{
+  display: flex;
+  flex-flow: column nowrap;
+}
 
 h1{
   font-family: 'Roboto';
@@ -34,6 +39,7 @@ color: #FFFFFF;
 text-align: center;
 margin-top: 100px;
 }
+
 `
 
 export const Label = styled.p`
