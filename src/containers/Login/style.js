@@ -28,7 +28,6 @@ form{
   display: flex;
   flex-flow: column nowrap;
 }
-
 h1{
   font-family: 'Roboto';
 font-style: normal;
@@ -39,7 +38,6 @@ color: #FFFFFF;
 text-align: center;
 margin-top: 100px;
 }
-
 `
 
 export const Label = styled.p`
@@ -58,8 +56,8 @@ height: 38.32px;
 background: #FFFFFF;
 box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
-border: none;
 padding-left: 10px;
+border: none; // Here i need to call a props to turn red
 `
 
 export const Button = styled.button`
@@ -95,7 +93,15 @@ color: #FFFFFF;
 
 
 a {
-cursor: pointer;
-text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
+`
+
+export const ErrorMessage = styled.p`
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+color: #fa8484;
+margin-top: 3px;
 `
