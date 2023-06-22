@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 
 `
-export const LoginImage = styled.img`
+export const RegisterImage = styled.img`
   height: 85%; // i changed from 70 to 85
 `
 
@@ -36,7 +36,7 @@ font-size: 24px;
 line-height: 28px;
 color: #FFFFFF;
 text-align: center;
-margin-top: 100px;
+margin-top: 10px;
 }
 `
 
@@ -46,7 +46,7 @@ font-weight: 500;
 font-size: 12px;
 line-height: 14px;
 color: #FFFFFF;
-margin-top: 28px;
+margin-top: ${props => (props.error ? '12px' : '28px')};
 margin-bottom: 5px;
 `
 
@@ -57,6 +57,7 @@ background: #FFFFFF;
 box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
 padding-left: 10px;
+border: none; // Here i need to call a props to turn red
 border: ${props => (props.error ? '2px  solid #CC1717' : 'none')};
 `
 

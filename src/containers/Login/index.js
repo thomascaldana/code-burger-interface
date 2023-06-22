@@ -1,11 +1,15 @@
 import React from 'react'
-import { Container, LoginImage, ContainerItens, Label, Input, Button, SignInLink, ErrorMessage } from '../Login/style'
+import { Container, LoginImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from '../Login/style'
+import Button from '../../components/button'
 
 import api from '../../services/api'
 import LoginImg from '../../assets/login-image.svg'
 import Logo from '../../assets/logo.svg'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import * as Yup from 'yup'
+
+import { toast } from 'react-toastify'
+
 import { yupResolver } from '@hookform/resolvers/yup'
 
 function Login () {
@@ -23,12 +27,18 @@ function Login () {
   })
 
   const onSubmit = async clientData => {
-    const response = await api.post('sessions', {
-      email: clientData.email,
-      password: clientData.password
-    })
+    const response = await toast.promise(
+      api.post('sessions', {
+        email: clientData.email,
+        password: clientData.password
+      }),
 
-    console.log(response)
+      {
+        pending: 'Verificando seus dados',
+        success: 'Seja bem-vindo(a)',
+        error: 'Verifique seu e-mail e senha'
+      }
+    )
   }
 
   return (
@@ -47,7 +57,7 @@ function Login () {
           <Input type="password" {...register('password')} error={errors.password?.message} />
           <ErrorMessage>{errors.password?.message}</ErrorMessage>
 
-          <Button type="submit">Sign In</Button>
+          <Button type="submit" style={{ marginTop: 75, marginBottom: 25 }}>Sign In</Button>
         </form>
         <SignInLink>Não possui conta? <a>Sign Up</a> </SignInLink>
 
