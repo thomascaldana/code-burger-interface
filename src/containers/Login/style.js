@@ -71,6 +71,7 @@ color: #FFFFFF;
 a {
   cursor: pointer;
   text-decoration: underline;
+  color: white;
 }
 `
 

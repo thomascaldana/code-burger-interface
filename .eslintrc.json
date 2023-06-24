@@ -16,12 +16,7 @@
         "react"
     ],
     "rules": {
-        "no-unused-vars": "warn",
-        "indent": [
-            2,
-            "tab"
-        ],
-        "no-tabs": 0
+        "no-unused-vars": "warn"
         /* "react/prop-types": 0 */
     }
 }
