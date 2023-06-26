@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, LoginImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from '../Login/style'
-import Button from '../../components/button'
+import Button from '../../components/Button'
 
 import api from '../../services/api'
 import LoginImg from '../../assets/login-image.svg'

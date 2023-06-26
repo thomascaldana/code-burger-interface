@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, RegisterImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from '../Register/style'
-import Button from '../../components/button'
+import Button from '../../components/Button'
 
 import api from '../../services/api'
 import RegisterImg from '../../assets/register-image.svg'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContainerButton } from '../button/styles'
+import { ContainerButton } from '../Button/styles'
 import PropTypes from 'prop-types'
 
 function Button ({ children, ...rest }) {
