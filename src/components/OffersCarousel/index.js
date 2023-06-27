@@ -5,7 +5,7 @@ import api from '../../services/api'
 import Carousel from 'react-elastic-carousel'
 import formatCurrency from '../../utils/formatCurrency'
 
-function OffersCarousel () {
+export function OffersCarousel () {
   const [offers, setOffers] = useState([])
   useEffect(() => {
     async function loadOffers () {
@@ -52,5 +52,3 @@ function OffersCarousel () {
     </Container>
   )
 }
-
-export default OffersCarousel

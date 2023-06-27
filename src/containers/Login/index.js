@@ -1,18 +1,18 @@
 import React from 'react'
 import { Container, LoginImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from '../Login/style'
-import Button from '../../components/Button'
+import { Button } from '../../components'
 
 import api from '../../services/api'
 import LoginImg from '../../assets/login-image.svg'
 import Logo from '../../assets/logo.svg'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import * as Yup from 'yup'
 import { useUser } from '../../hooks/UserContext'
 import { toast } from 'react-toastify'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Link, useHistory } from 'react-router-dom'
 
-function Login () {
+export function Login () {
   const history = useHistory()
   const { putUserData } = useUser()
 
@@ -73,5 +73,3 @@ function Login () {
     </Container>
   )
 }
-
-export default Login

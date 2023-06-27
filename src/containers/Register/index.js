@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, RegisterImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from '../Register/style'
-import Button from '../../components/Button'
+import { Button } from '../../components'
 
 import api from '../../services/api'
 import RegisterImg from '../../assets/register-image.svg'
@@ -12,7 +12,7 @@ import * as Yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Link } from 'react-router-dom'
 
-function Register () {
+export function Register () {
   const schema = Yup.object().shape({
     name: Yup.string('o nome não pode conter números').required('o nome é obrigatório'),
     email: Yup.string().email('digite um e-mail válido').required('o e-mail é obrigatório'),
@@ -81,5 +81,3 @@ function Register () {
     </Container >
   )
 }
-
-export default Register
