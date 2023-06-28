@@ -11,7 +11,6 @@ export function OffersCarousel () {
     async function loadOffers () {
       const { data } = await api.get('products')
 
-      console.log(data)
       const onlyOffers = data.filter(product => product.offer).map(product => {
         return { ...product, formatedPrice: formatCurrency(product.price) }
       })
