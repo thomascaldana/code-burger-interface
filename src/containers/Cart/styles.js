@@ -1,9 +1,24 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-background: #E5E5E5;
+background: #e5e5e5;
 min-height: 100vh;
+
+.wrapper{
+    display: flex;
+    background-color: red;
+  
+}
+
 `
 
 export const CartImg = styled.img`
 width: 100%;`
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding-bottom: 30px;
+
+`

@@ -8,7 +8,7 @@ border-radius: 20px;
 box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
 padding: 10px;
 width: max-content;
-margin: 0 auto;
+//margin: 0 auto;
 `
 export const Header = styled.div`
 display: grid;
