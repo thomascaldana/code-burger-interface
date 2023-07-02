@@ -4,9 +4,14 @@ import { Container, CategoryImg, ContainerItems, Image, ProductName, ProductPric
 import api from '../../services/api'
 import Carousel from 'react-elastic-carousel'
 import formatCurrency from '../../utils/formatCurrency'
+import { useCart } from '../../hooks/CartContext'
+import { useHistory } from 'react-router-dom'
 
 export function OffersCarousel () {
   const [offers, setOffers] = useState([])
+  const { putProductInCart } = useCart()
+  const { push } = useHistory()
+
   useEffect(() => {
     async function loadOffers () {
       const { data } = await api.get('products')
@@ -41,7 +46,12 @@ export function OffersCarousel () {
               <ProductPrice>
                 {product.formatedPrice}
               </ProductPrice>
-              <Button>
+              <Button
+                onClick={() => {
+                  putProductInCart(product)
+                  push('/carrinho')
+                }
+                }>
                 Peça agora
               </Button>
             </ContainerItems>
