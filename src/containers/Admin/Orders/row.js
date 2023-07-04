@@ -13,11 +13,26 @@ import Typography from '@mui/material/Typography'
 // import Paper from '@mui/material/Paper'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import api from '../../../services/api'
+import status from './order-status'
 
-import { ProductsImg } from './styles'
+import { ProductsImg, ReactSelectStyle } from './styles'
+import { set } from 'react-hook-form'
 
 function Row ({ row }) {
   const [open, setOpen] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false)
+
+  async function setNewStatus (id, status) {
+    setIsLoading(true)
+    try {
+      await api.put(`orders/${id}`, { status })
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   return (
     <React.Fragment>
@@ -36,6 +51,18 @@ function Row ({ row }) {
         </TableCell>
         <TableCell>{row.name}</TableCell>
         <TableCell>{row.date}</TableCell>
+
+        <ReactSelectStyle
+          options={status}
+          menuPortalTarget={document.body}
+          placeholder='Status'
+          defaultValue={status.find(option => option.value === row.status || null)}
+          onChange={newStatus => {
+            setNewStatus(row.orderId, newStatus.value)
+          }}
+          isLoading={isLoading}
+        />
+
         <TableCell>{row.status}</TableCell>
       </TableRow>
       <TableRow>
