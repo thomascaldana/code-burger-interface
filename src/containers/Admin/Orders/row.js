@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 import Collapse from '@mui/material/Collapse'
@@ -6,15 +6,15 @@ import IconButton from '@mui/material/IconButton'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
+// import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Typography from '@mui/material/Typography'
-import Paper from '@mui/material/Paper'
+// import Paper from '@mui/material/Paper'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 
-import { Container } from './styles'
+import { ProductsImg } from './styles'
 
 function Row ({ row }) {
   const [open, setOpen] = React.useState(false)
@@ -37,7 +37,6 @@ function Row ({ row }) {
         <TableCell>{row.name}</TableCell>
         <TableCell>{row.date}</TableCell>
         <TableCell>{row.status}</TableCell>
-        <TableCell></TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -65,7 +64,7 @@ function Row ({ row }) {
                         <TableCell>{productRow.name}</TableCell>
                         <TableCell>{productRow.category}</TableCell>
                         <TableCell>
-                          <img src={productRow.url} alt='imagem-do-produto' />
+                          <ProductsImg src={productRow.url} alt='imagem-do-produto' />
                         </TableCell>
                       </TableRow>
                     ))}
