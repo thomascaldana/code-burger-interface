@@ -17,17 +17,26 @@ export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
   border-radius: 2px;
-  background: #565656;
+  background:${props => props.isActive ? '#565656' : 'none'};
   margin: 8px;
   padding-left: 25px;
-
-
-  
 
   .icon{
     color: #FFFFFF
   }
 
+`
+
+export const LogoutContainer = styled.div`
+
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+    margin: 8px;
+  padding-left: 25px;
+  position: absolute;
+  bottom: 30px;
 `
 export const ListLink = styled(Link)`
   text-decoration: none;
