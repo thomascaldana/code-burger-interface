@@ -15,7 +15,6 @@ export function Admin ({ match: { path } }) {
         {path === paths.Order && <Orders />}
         {path === paths.Products && <ListProducts />}
         {path === paths.NewProduct && <NewProduct />}
-
       </ContainerItems>
     </Container>
   )
