@@ -8,6 +8,8 @@ display: flex;
 align-items: center;
 flex-flow: row nowrap;
 justify-content: space-around;
+position: fixed;
+width: 100vw;
 `
 export const ContainerLeft = styled.div`
 display: flex;
