@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, LoginImage, ContainerItens, Label, Input, SignInLink, ErrorMessage } from '../Login/style'
-import { Button } from '../../components'
+import { Container, LoginImage, ContainerItens, Label, Input, SignInLink } from '../Login/style'
+import { Button, ErrorMessage } from '../../components'
 
 import api from '../../services/api'
 import LoginImg from '../../assets/login-image.svg'
@@ -44,7 +44,6 @@ export function Login () {
     )
 
     putUserData(data)
-    console.log(data)
 
     setTimeout(() => {
       if (data.admin) {
