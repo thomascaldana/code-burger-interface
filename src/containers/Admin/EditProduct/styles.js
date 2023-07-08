@@ -52,3 +52,17 @@ export const LabelUpload = styled.label`
   }
 
 `
+
+export const ContainerInput = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  
+  input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+  }
+
+`
