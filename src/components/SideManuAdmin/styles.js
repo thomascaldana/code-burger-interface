@@ -28,14 +28,13 @@ export const ItemContainer = styled.div`
 `
 
 export const LogoutContainer = styled.div`
-
   height: 60px;
   display: flex;
   align-items: center;
   border-radius: 2px;
     margin: 8px;
   padding-left: 25px;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
 `
 export const ListLink = styled(Link)`
@@ -46,4 +45,5 @@ export const ListLink = styled(Link)`
   font-weight: 400;
   line-height: normal;
   margin-left: 8px
+
 `

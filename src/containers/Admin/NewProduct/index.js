@@ -8,10 +8,13 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload'
 import * as Yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ErrorMessage } from '../../../components/ErrorMessage'
+import { toast } from 'react-toastify'
+import { useHistory } from 'react-router-dom'
 
 function NewProduct () {
   const [fileName, setFileName] = useState(null)
   const [categories, setCategories] = useState([])
+  const { push } = useHistory()
 
   const schema = Yup.object().shape({
     name: Yup.string().required('Digite o nome do produto'),
@@ -21,7 +24,7 @@ function NewProduct () {
       return value?.length > 0
     })
       .test('fileSize', 'Carregue arquivos de até 2mb', value => {
-        return value[0]?.size <= 200000
+        return value[0]?.size <= 4000000
       })
       .test('type', 'Carregue apenas arquivos JPEG', value => {
         return ((value[0]?.type === 'image/jpeg') ||
@@ -34,7 +37,24 @@ function NewProduct () {
     resolver: yupResolver(schema)
   })
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    const productDataFormData = new FormData()
+
+    productDataFormData.append('name', data.name)
+    productDataFormData.append('price', data.price)
+    productDataFormData.append('category_id', data.category.id)
+    productDataFormData.append('file', data.file[0])
+
+    await toast.promise(api.post('products', productDataFormData), {
+      pending: 'Criando novo produto',
+      success: 'Produto criado com sucesso',
+      error: 'Falha ao enviar o produto'
+    })
+
+    setTimeout(() => {
+      push('/listar-produtos')
+    }, 2000)
+  }
 
   useEffect(() => {
     async function loadCategories () {
