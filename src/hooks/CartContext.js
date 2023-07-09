@@ -71,9 +71,8 @@ export const CartProvider = ({ children }) => {
   const deleteProductsFromCart = async (productId) => {
     const cartIndex = cartProducts.findIndex((pd) => pd.id === productId)
 
-    if (cartProducts[cartIndex].quantity === 1) {
-      deleteProducts(productId)
-    }
+    deleteProducts(productId)
+
   }
 
   useEffect(() => {
