@@ -3,7 +3,7 @@ import { Container, LoginImage, ContainerItens, Label, Input, SignInLink } from 
 import { Button, ErrorMessage } from '../../components'
 
 import api from '../../services/api'
-import LoginImg from '../../assets/login-image.svg'
+import LoginImg from '../../assets/login-image.jpg'
 import Logo from '../../assets/logo.svg'
 import { useForm } from 'react-hook-form'
 import * as Yup from 'yup'

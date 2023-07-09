@@ -3,7 +3,7 @@ import { Container, RegisterImage, ContainerItens, Label, Input, SignInLink } fr
 import { Button, ErrorMessage } from '../../components'
 
 import api from '../../services/api'
-import RegisterImg from '../../assets/register-image.svg'
+import RegisterImg from '../../assets/register-image.jpg'
 import Logo from '../../assets/logo.svg'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { toast } from 'react-toastify'
