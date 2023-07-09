@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerButton = styled.button`
-width: 182.81px;
+width: 182.82px;
 height: 36.13px;
 background: #9758A6;
 border-radius: 20px;
@@ -13,7 +13,6 @@ font-size: 16px;
 line-height: 24px;
 text-align: center;
 color: #EEEEEE;
-
 
 &:hover{
   opacity: 0.8;
