@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ContainerButton = styled.button`
-width: 182.82px;
+width: 182.81px;
 height: 36.13px;
 background: #9758A6;
 border-radius: 20px;
