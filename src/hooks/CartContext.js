@@ -70,9 +70,7 @@ export const CartProvider = ({ children }) => {
 
   const deleteProductsFromCart = async (productId) => {
     const cartIndex = cartProducts.findIndex((pd) => pd.id === productId)
-
     deleteProducts(productId)
-
   }
 
   useEffect(() => {
