@@ -10,6 +10,7 @@ flex-flow: row nowrap;
 justify-content: space-around;
 position: fixed;
 width: 100vw;
+z-index: 2;
 `
 export const ContainerLeft = styled.div`
 display: flex;
