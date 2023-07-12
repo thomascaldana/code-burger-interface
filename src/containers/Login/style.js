@@ -80,6 +80,8 @@ img{
 
 .sign-in-buttton{
   align-self: center;
+  margin-top: 75px;
+  margin-bottom: 25px;
 
   @media screen and (max-width: 1500px) {
     width: 100%;

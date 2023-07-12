@@ -73,7 +73,7 @@ export function Register () {
           <Input type="password" {...register('confirmPassword')} error={errors.confirmPassword?.message} />
           <ErrorMessage>{errors.confirmPassword?.message}</ErrorMessage>
 
-          <Button type="submit" style={{ marginTop: 25, marginBottom: 25 }}>Sign Up</Button>
+          <Button type="submit" className='sign-up-buttton' style={{ marginTop: 25, marginBottom: 25 }}>Sign Up</Button>
         </form>
         <SignInLink>Já possui conta? <Link to='/login'>Sign In</Link> </SignInLink>
 
