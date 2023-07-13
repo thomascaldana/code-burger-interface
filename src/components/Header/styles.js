@@ -11,28 +11,53 @@ justify-content: space-around;
 position: fixed;
 width: 100vw;
 z-index: 2;
+
+
+
+  @media screen and (max-width: 450px) {
+
+  }
+
 `
 export const ContainerLeft = styled.div`
 display: flex;
 gap: 30px;
+
+@media screen and (max-width: 380px) {
+   gap: 1.3rem
+}
+
 `
 export const PageLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: ${props => props.isActive ? '#9758A6' : '#555555'};
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   font-weight: ${props => props.isActive ? 'bold' : 'normal'};
 
   &:active{
     
   }
+
+  
+  @media screen and (max-width: 450px) {
+    font-size: .9rem;
+
+    img{
+      width: 1.5rem;
+    }
+}
+  
 `
 export const ContainerRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 
+  @media screen and (max-width: 380px) {
+    gap: 0.65rem;
+  }
  
 `
 export const ContainerText = styled.div`
@@ -59,4 +84,5 @@ font-weight: 700;
 line-height: normal;
 cursor: pointer;
 text-decoration: none;
+
 `

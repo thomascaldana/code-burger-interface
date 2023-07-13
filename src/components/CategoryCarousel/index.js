@@ -15,8 +15,8 @@ export function CategoryCarousel () {
   }, [])
 
   const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 450, itemsToShow: 2 },
+    { width: 1, itemsToShow: 2 },
+    { width: 250, itemsToShow: 2 },
     { width: 650, itemsToShow: 3 },
     { width: 900, itemsToShow: 4 },
     { width: 1300, itemsToShow: 5 }

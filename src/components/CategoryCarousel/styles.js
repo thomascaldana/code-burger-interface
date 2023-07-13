@@ -14,8 +14,11 @@ padding: 35px 0;
     color: #efefef;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border: none;
-
-
+    
+    @media screen and (max-width: 400px) {
+    scale: 70%;
+    margin-left: -15px;
+  }
 }
 
 .rec.rec-arrow:hover {
@@ -32,17 +35,44 @@ padding: 35px 0;
 `
 
 export const CategoryImg = styled.img`
+
+ @media screen and (max-width: 850px) {
+    width: 20rem;
+  }
+  @media screen and (max-width: 400px) {
+    width: 14rem;
+  } 
 `
 export const ContainerItems = styled.div`
 display: flex;
 flex-flow: column;
 gap: 15px;
+
+@media screen and (max-width: 400px) {
+  gap: 10px;
+
+
+  }
 `
 export const Image = styled.img`
 width: 200px;
 height: 200px;
 border-radius: 30px;
 
+@media screen and (max-width: 650px) {
+    width: 8rem;
+    height: 8rem;
+  }
+@media screen and (max-width: 480px) {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 15px;
+  }
+@media screen and (max-width: 415px) {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 15px;
+  }
 `
 export const Button = styled(Link)`
 background-color: rgba(151, 88, 166, 1);
@@ -67,4 +97,15 @@ text-decoration: none;
 display: flex;
 align-items: center;
 justify-content: center;
+
+@media screen and (max-width: 650px) {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+  }
+@media screen and (max-width: 485px) {
+    width: 100%;
+    height: 40px;
+    font-size: 0.8rem;
+  }
 `
