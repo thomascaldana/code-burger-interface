@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Offers from '../../assets/offers.png'
-import { Container, CategoryImg, ContainerItems, Image, ProductName, ProductPrice, Button } from './styles'
+import { Container, OffersImg, ContainerItems, Image, ProductName, ProductPrice, Button } from './styles'
 import api from '../../services/api'
 import Carousel from 'react-elastic-carousel'
 import formatCurrency from '../../utils/formatCurrency'
@@ -34,7 +34,7 @@ export function OffersCarousel () {
 
   return (
     <Container>
-      <CategoryImg src={Offers} alt='logo das ofertas' />
+      <OffersImg src={Offers} alt='logo das ofertas' />
       <Carousel itemsToShow={5} style={{ width: '90%' }} breakPoints={breakPoints}>
         {
           offers && offers.map(product => (

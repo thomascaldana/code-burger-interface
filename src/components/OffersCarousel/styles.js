@@ -34,13 +34,13 @@ padding: 35px 0;
 }
 `
 
-export const CategoryImg = styled.img`
+export const OffersImg = styled.img`
 
  @media screen and (max-width: 850px) {
-    width: 20rem;
+    height: 2.7rem;
   }
   @media screen and (max-width: 400px) {
-    width: 14rem;
+    height: 2.2rem;
   } 
 `
 export const ContainerItems = styled.div`
@@ -62,14 +62,12 @@ border-radius: 30px;
     height: 8rem;
   }
 @media screen and (max-width: 480px) {
-  width: 6rem;
+    width: 6rem;
     height: 6rem;
     border-radius: 15px;
   }
 @media screen and (max-width: 415px) {
-    width: 5.5rem;
-    width: 5.5rem;
-
+  
     border-radius: 15px;
   }
 `

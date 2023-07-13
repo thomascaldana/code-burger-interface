@@ -36,11 +36,11 @@ padding: 35px 0;
 
 export const CategoryImg = styled.img`
 
- @media screen and (max-width: 850px) {
-    width: 20rem;
+@media screen and (max-width: 850px) {
+    height: 2.7rem;
   }
   @media screen and (max-width: 400px) {
-    width: 14rem;
+    height: 2.2rem;
   } 
 `
 export const ContainerItems = styled.div`
