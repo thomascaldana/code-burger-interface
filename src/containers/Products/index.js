@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ProductsLogo from '../../assets/products-logo.jpg'
 import { Container, ProductsImg, CategoryButton, CategoriesMenu, ProductsContainer } from './styles'
+import { CardProduct } from '../../components/CardProduct'
 import api from '../../services/api'
-import { CardProduct } from '../../components'
 import formatCurrency from '../../utils/formatCurrency'
 import PropTypes from 'prop-types'
 
@@ -62,7 +62,7 @@ export function Products ({ location: { state } }) {
       </CategoriesMenu>
       <ProductsContainer>
         {filteredProducts && filteredProducts.map(product => (
-          <CardProduct key={product.id} product={product} />
+          <CardProduct className='card-product' key={product.id} product={product} />
 
         ))}
       </ProductsContainer>

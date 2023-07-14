@@ -78,7 +78,7 @@ img{
   min-width: 15rem;
 }
 
-.sign-in-buttton{
+.sign-in-button{
   align-self: center;
   margin-top: 75px;
   margin-bottom: 25px;

@@ -70,7 +70,7 @@ export function Login () {
           <Input type="password" {...register('password')} error={errors.password?.message} />
           <ErrorMessage>{errors.password?.message}</ErrorMessage>
 
-          <Button className='sign-in-buttton' type="submit">Sign In</Button>
+          <Button className='sign-in-button' type="submit">Sign In</Button>
         </form>
         <SignInLink>Não possui conta? <Link to='/cadastro'>Sign Up</Link> </SignInLink>
 
