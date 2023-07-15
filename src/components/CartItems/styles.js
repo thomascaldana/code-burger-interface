@@ -103,6 +103,7 @@ p{
     grid-gap: 10px 10px;
     img{
       width: 3.8rem;
+      height: 3.8rem;
     }
     p{
       text-align: center;
