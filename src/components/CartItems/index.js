@@ -13,7 +13,7 @@ export function CartItems () {
         <p></p>
         <p>Items</p>
         <p>Preço</p>
-        <p>Quantidade</p>
+        <p>Quant.</p>
         <p>Total</p>
         <p></p>
 
