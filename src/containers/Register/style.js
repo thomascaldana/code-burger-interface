@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import BackgroundImage from '../../assets/background.svg'
 
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background: url('${BackgroundImage}');
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,7 @@ export const RegisterImage = styled.img`
 
 export const ContainerItens = styled.div`
 background: #373737;
-border-radius: 0 10px 10px 0;
+border-radius: 10px;
 height: calc(45rem + 5vw);
 
 padding: calc(2vw) calc(5vw);
@@ -54,7 +53,6 @@ min-height: 36rem;
   min-height: 36rem;
   }
 
-
 form{
   display: flex;
   flex-flow: column nowrap;
@@ -75,6 +73,7 @@ img{
   width: calc(5rem + 10vw);
   margin: 0 auto;
   min-width: 15rem;
+
 }
 
 .sign-up-buttton{

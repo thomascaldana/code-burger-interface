@@ -1,13 +1,36 @@
 import styled from 'styled-components'
-import BackgroundImage from '../../assets/background.svg'
+import BackgroundImage from '../../assets/background-burguer.jpg'
 
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background: url('${BackgroundImage}');
+  background: url(${BackgroundImage});
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const BeerImgTop = styled.img`
+ position: absolute;
+    left: 15px;
+    top: 0;
+
+`
+export const BurguerImgTop = styled.img`
+ position: absolute;
+    right: 15px;
+    top: 0;
+`
+
+export const BeerImgDown = styled.img`
+ position: absolute;
+    right: 15px;
+    bottom: 0;
+`
+export const BurguerImgDown = styled.img`
+ position: absolute;
+    left: 15px;
+    bottom: 15px;
 `
 export const LoginImage = styled.img`
   height: calc( 10rem + 40vw);
@@ -25,20 +48,21 @@ export const LoginImage = styled.img`
   `
 
 export const ContainerItens = styled.div`
-background: #373737;
-border-radius: 0 10px 10px 0;
-height: calc( 10rem + 40vw);
-
-padding: calc(2vw) calc(5vw);
+background: rgb(245,224,186);
+background: linear-gradient(0deg, rgba(245,224,186,1) 0%, rgba(249,212,146,1) 35%);
+border-radius: 10px;
+height: 100%;
+margin: 0 auto;
+padding: 1rem;
 display: flex;
 flex-flow: column nowrap;
 justify-content: center;
-margin: auto calc(10rem - 7vw) auto 0 ;
-width:calc(10rem + 20vw);
+width: calc(25rem + 20vw);
 max-height: 40rem;
-max-width: 34rem;
+max-width: 40rem;
 min-width: 22rem;
 min-height: 36rem;
+z-index: 2;
 
 @media screen and (max-width: 1000px) {
   border-radius: 10px;
@@ -48,7 +72,6 @@ min-height: 36rem;
 
   @media screen and (max-width: 400px) {
   padding: 20px 20px;
-  margin: auto calc(10rem - 7vw) auto 0;
   max-height: 40rem;
   max-width: 34rem;
   min-width: 19rem;
@@ -61,21 +84,32 @@ form{
   flex-flow: column nowrap;
 }
 h1{
-  font-family: 'Roboto';
+  font-family: 'Preahvihear', sans-serif;;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  color: #FFFFFF;
+  color: #000;
   text-align: center;
-  margin-top:  calc(5rem - 2vw);
+  margin-top:  5rem;
   
 }
 
 img{
-  width: calc(5rem + 10vw);
+  width: calc(22rem + 5vw);
   margin: 0 auto;
   min-width: 15rem;
+  max-width: 25rem;
+
+  @media screen and (max-width: 430px) {
+    width: 21rem;
+  }
+  @media screen and (max-width: 360px) {
+    width: 19.5rem;
+  }
+  @media screen and (max-width: 340px) {
+    width: 17.5rem;
+  }
 }
 
 .sign-in-button{
@@ -83,13 +117,7 @@ img{
   margin-top: 75px;
   margin-bottom: 25px;
 
-  @media screen and (max-width: 1500px) {
-    width: 100%;
-    min-width: 250px;
-  }
-  @media screen and (min-width: 1500px) {
-    
-  }
+
 
 }
 `
@@ -99,29 +127,35 @@ font-style: normal;
 font-weight: 500;
 font-size: 12px;
 line-height: 14px;
-color: #FFFFFF;
+color: #000;
 margin-top: 28px;
 margin-bottom: 5px;
+margin-left: 5rem;
+margin-right: 5rem;
+
+@media screen and (max-width: 700px) {
+  margin: 28px auto 0 auto;
+  width: 100%;
+  }
 `
 
 export const Input = styled.input`
-width: 20vw;
 height: 1vw;
 min-width: 250px;
-max-width: 391.42px;
 min-height: 38.32px;
-background: #FFFFFF;
+background: #f1f1f1;
 box-shadow: 3px 3px 10px rgba(74, 144, 226, 0.19);
 border-radius: 5px;
 padding-left: 10px;
 border: ${props => (props.error ? '2px  solid #CC1717' : 'none')};
+margin-left: 5rem;
+margin-right: 5rem;
 
-@media screen and (max-width: 1500px) {
-  width: 100%;
+@media screen and (max-width: 700px) {
+  margin: 0 auto;
+  width: 100%
   }
-@media screen and (max-width: 400px) {
 
-  }
 `
 
 export const SignInLink = styled.p`
@@ -129,13 +163,14 @@ font-style: normal;
 font-weight: 300;
 font-size: 14px;
 line-height: 16px;
-color: #FFFFFF;
+color: #000;
 align-self: center;
 
 
 a {
   cursor: pointer;
   text-decoration: underline;
-  color: white;
+  color: #000;
+
 }
 `

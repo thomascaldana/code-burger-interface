@@ -1,9 +1,8 @@
 import React from 'react'
-import { Container, LoginImage, ContainerItens, Label, Input, SignInLink } from '../Login/style'
+import { Container, ContainerItens, Label, Input, SignInLink, BeerImgTop, BurguerImgTop, BeerImgDown, BurguerImgDown } from '../Login/style'
 import { Button, ErrorMessage } from '../../components'
 
 import api from '../../services/api'
-import LoginImg from '../../assets/login-image.jpg'
 import Logo from '../../assets/logo.svg'
 import { useForm } from 'react-hook-form'
 import * as Yup from 'yup'
@@ -11,6 +10,8 @@ import { useUser } from '../../hooks/UserContext'
 import { toast } from 'react-toastify'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Link, useHistory } from 'react-router-dom'
+import BeerImage from '../../assets/beer.svg'
+import BurguerImage from '../../assets/burguer.svg'
 
 export function Login () {
   const history = useHistory()
@@ -56,9 +57,13 @@ export function Login () {
 
   return (
     <Container>
-      <LoginImage src={LoginImg} alt="login-image" />
+      <BeerImgTop src={BeerImage} alt='beer' />
+      <BurguerImgTop src={BurguerImage} alt='burguer' />
+      <BeerImgDown src={BeerImage} alt='beer' />
+      <BurguerImgDown src={BurguerImage} alt='burguer' />
       <ContainerItens >
         <img src={Logo} alt="logo" />
+
         <h1>Login</h1>
 
         <form noValidate onSubmit={handleSubmit(onSubmit)}>
