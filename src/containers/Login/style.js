@@ -14,23 +14,48 @@ export const BeerImgTop = styled.img`
  position: absolute;
     left: 15px;
     top: 0;
+    opacity: 0.6;
+
+    @media screen and (max-width: 750px) {
+      width: 3.5rem;
+      z-index: 3;
+    }
 
 `
 export const BurguerImgTop = styled.img`
  position: absolute;
     right: 15px;
     top: 0;
+    opacity: 0.6;
+
+
+    @media screen and (max-width: 750px) {
+      width: 3.5rem;
+      z-index: 3;
+    }
 `
 
 export const BeerImgDown = styled.img`
  position: absolute;
     right: 15px;
     bottom: 0;
+    opacity: 0.6;
+
+    @media screen and (max-width: 750px) {
+      width: 3.5rem;
+      z-index: 3;
+    }
 `
 export const BurguerImgDown = styled.img`
  position: absolute;
     left: 15px;
     bottom: 15px;
+    opacity: 0.6;
+
+      @media screen and (max-width: 750px) {
+        width: 3.5rem;
+        z-index: 3;
+    }
 `
 export const LoginImage = styled.img`
   height: calc( 10rem + 40vw);
@@ -50,7 +75,6 @@ export const LoginImage = styled.img`
 export const ContainerItens = styled.div`
 background: rgb(245,224,186);
 background: linear-gradient(0deg, rgba(245,224,186,1) 0%, rgba(249,212,146,1) 35%);
-border-radius: 10px;
 height: 100%;
 margin: 0 auto;
 padding: 1rem;
@@ -58,31 +82,35 @@ display: flex;
 flex-flow: column nowrap;
 justify-content: center;
 width: calc(25rem + 20vw);
-max-height: 40rem;
 max-width: 40rem;
 min-width: 22rem;
 min-height: 36rem;
 z-index: 2;
 
 @media screen and (max-width: 1000px) {
-  border-radius: 10px;
   padding: 20px 40px;
  
   }
 
   @media screen and (max-width: 400px) {
   padding: 20px 20px;
-  max-height: 40rem;
   max-width: 34rem;
   min-width: 19rem;
-  min-height: 36rem;
   }
 
 
 form{
   display: flex;
   flex-flow: column nowrap;
+
+  .error-massage-div{
+    
+    @media screen and (min-width: 700px) {
+      margin-left: 5rem;
+    }
+  }
 }
+
 h1{
   font-family: 'Preahvihear', sans-serif;;
   font-style: normal;

@@ -69,11 +69,15 @@ export function Login () {
         <form noValidate onSubmit={handleSubmit(onSubmit)}>
           <Label>Email</Label>
           <Input type="email" {...register('email')} error={errors.email?.message} />
-          <ErrorMessage>{errors.email?.message}</ErrorMessage>
+          <div className='error-massage-div'>
+            <ErrorMessage className='error-message'>{errors.email?.message}</ErrorMessage>
+          </div>
 
           <Label>Senha</Label>
           <Input type="password" {...register('password')} error={errors.password?.message} />
-          <ErrorMessage>{errors.password?.message}</ErrorMessage>
+          <div className='error-massage-div'>
+            <ErrorMessage className='error-message'>{errors.password?.message}</ErrorMessage>
+          </div>
 
           <Button className='sign-in-button' type="submit">Sign In</Button>
         </form>
