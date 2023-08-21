@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ProductsLogo from '../../assets/products-logo.jpg'
+import HomeLogo from '../../assets/home-logo.jpg'
 import { Container, ProductsImg, CategoryButton, CategoriesMenu, ProductsContainer } from './styles'
 import { CardProduct } from '../../components/CardProduct'
 import api from '../../services/api'
@@ -50,7 +50,7 @@ export function Products ({ location: { state } }) {
 
   return (
     <Container>
-      <ProductsImg src={ProductsLogo} alt='logo da home' />
+      <ProductsImg src={HomeLogo} alt='logo da home' />
       <CategoriesMenu>
         {categories && categories.map(category => (
           <CategoryButton type='button' key={category.id}

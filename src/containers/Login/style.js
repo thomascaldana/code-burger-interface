@@ -17,8 +17,7 @@ export const BeerImgTop = styled.img`
     opacity: 0.6;
 
     @media screen and (max-width: 750px) {
-      width: 3.5rem;
-      z-index: 3;
+      display: none;
     }
 
 `
@@ -30,8 +29,7 @@ export const BurguerImgTop = styled.img`
 
 
     @media screen and (max-width: 750px) {
-      width: 3.5rem;
-      z-index: 3;
+      display: none;
     }
 `
 
@@ -42,8 +40,7 @@ export const BeerImgDown = styled.img`
     opacity: 0.6;
 
     @media screen and (max-width: 750px) {
-      width: 3.5rem;
-      z-index: 3;
+      display: none;
     }
 `
 export const BurguerImgDown = styled.img`
@@ -53,8 +50,7 @@ export const BurguerImgDown = styled.img`
     opacity: 0.6;
 
       @media screen and (max-width: 750px) {
-        width: 3.5rem;
-        z-index: 3;
+        display: none;
     }
 `
 export const LoginImage = styled.img`
@@ -86,6 +82,7 @@ max-width: 40rem;
 min-width: 22rem;
 min-height: 36rem;
 z-index: 2;
+box-shadow: 0px 2px 10px 0px rgba(0,0,0,.75);
 
 @media screen and (max-width: 1000px) {
   padding: 20px 40px;
