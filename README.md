@@ -1,9 +1,14 @@
 ## Elegance Burguer
 #### A burguer shop website
 
+
+<p>
+<img src="https://github.com/thomascaldana/files-for-readmes/blob/main/ilustration-elegance-burguer.svg" alt="project demonstration in web and mobile" width="450" />
+</p>
+
 <br>
 
-Welcome to my this project!
+Welcome to this project!
 
 <br>
 
