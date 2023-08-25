@@ -53,20 +53,6 @@ export const BurguerImgDown = styled.img`
         display: none;
     }
 `
-export const LoginImage = styled.img`
-  height: calc( 10rem + 40vw);
-  min-height: 36rem;
-  max-height: 40rem;
-  margin: auto 0 auto calc(10rem - 7vw);
-
-
-  @media screen and (max-width: 1000px) {
-    width: 0px;
-    height: 0px;
-    border: transparent;
-    background-color: transparent;
-  }
-  `
 
 export const ContainerItens = styled.div`
 background: rgb(245,224,186);
@@ -74,6 +60,7 @@ background: linear-gradient(0deg, rgba(245,224,186,1) 0%, rgba(249,212,146,1) 35
 height: 100%;
 margin: 0 auto;
 padding: 1rem;
+padding-bottom: 10rem;
 display: flex;
 flex-flow: column nowrap;
 justify-content: center;
@@ -85,13 +72,8 @@ z-index: 2;
 box-shadow: 0px 2px 10px 0px rgba(0,0,0,.75);
 
 
-@media screen and (max-width: 1000px) {
-  padding: 20px 40px;
- 
-  }
-
   @media screen and (max-width: 400px) {
-  padding: 20px 20px;
+  padding: 0 20px 10rem 20px;
   max-width: 34rem;
   min-width: 19rem;
   }
@@ -117,13 +99,13 @@ h1{
   line-height: 28px;
   color: #000;
   text-align: center;
-  margin-top:  5rem;
+  margin-top:  0rem;
   
 }
 
 img{
   width: calc(22rem + 5vw);
-  margin: 0 auto;
+  margin: 10rem auto 2.5rem auto;
   min-width: 15rem;
   max-width: 25rem;
 
